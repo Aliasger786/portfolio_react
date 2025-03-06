@@ -1,182 +1,162 @@
 .skills {
-    padding: 0 0 50px 0;
+  padding: 0 0 50px 0;
+  text-align: center;
 }
 
 .skills-box {
-    background-color: #151515;
-    border-radius: 64px;
-    -webkit-border-radius: 64px;
-    -moz-border-radius: 64px;
-    -ms-border-radius: 64px;
-    -o-border-radius: 64px;
-    padding: 60px 50px;
-    text-align: center;
-    margin-top: 25px;
+  background-color: #151515;
+  border-radius: 64px;
+  padding: 50px;
+  margin-top: 25px;
 }
 
-.skills h5 {
-    font-size: 25px;
-    font-weight: 700;
+.skills h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: white;
 }
 
+.skills .responsive-sub-text {
+  font-size: 22px;
+  color: white;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+/* === Responsive Grid Layout === */
 .skills .image-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    /* Adjust minmax for image size */
-    gap: 1px;
-    /* Space between images */
-    overflow-x: auto;
-    /* Enable horizontal scrolling if needed */
-    padding: 16px;
-    /* Optional: Add padding */
-}
-
-.skills .image-grid img {
-    /* Ensure images fill their grid cells */
-    /* Maintain aspect ratio */
-    border-radius: 8px;
-    /* Optional: Add rounded corners */
-    object-fit: cover;
-    transition: filter 0.3s ease, box-shadow 0.3s ease;
-    /* Ensure images cover the grid cell */
-}
-
-.skills .image-grid img:hover {
-    /* Ensure images fill their grid cells */
-    /* Maintain aspect ratio */
-    filter: brightness(1.3);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.skills .skills-box .skill-list {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-.skills .skills-box .skill-list li {
-    margin-bottom: 12px;
-    /* Space between items */
-    padding: 10px 15px;
-    /* Padding inside each item */
-    background-color: #1e1e1e;
-    /* Dark background for space theme */
-    border-radius: 8px;
-    /* Rounded corners */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-    /* Subtle shadow */
-    font-size: 16px;
-    /* Font size */
-    color: #fff;
-    /* Text color */
-    transition: all 0.3s ease;
-    /* Smooth transition for hover effect */
-    display: flex;
-    /* Use flexbox for alignment */
-    align-items: center;
-
-    animation: fadeIn 0.5s ease forwards;
-    opacity: 0;
-}
-
-.skills .skills-box .skill-list li:hover {
-    transform: translateY(-6px);
-    /* Slight lift on hover */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    /* Stronger shadow on hover */
-}
-
-.skills .skills-box .skill-list li strong {
-    color: #00bfff;
-    /* Neon Blue */
-    font-weight: 600;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(10px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.skills .skills-box .skill-list li:nth-child(1) {
-    animation-delay: 0.1s;
-}
-
-.skills .skills-box .skill-list li:nth-child(2) {
-    animation-delay: 0.2s;
-}
-
-.skills .skills-box .skill-list li:nth-child(3) {
-    animation-delay: 0.3s;
-}
-
-.skills .skills-box .skill-list li:nth-child(4) {
-    animation-delay: 0.4s;
-}
-
-.skills .skills-box .skill-list li:nth-child(5) {
-    animation-delay: 0.5s;
-}
-
-.skills p {
-    font-size: 18px;
-    color: #B8B8B8;
-    line-height: 1.5em;
-    letter-spacing: .8px;
-    margin: 14px 0 75px 0;
-}
-
-.skills-slider {
-    width: 80%;
-    margin: 0 auto;
-    position: relative;
-}
-
-.skills-slider .item img {
-    width: 50%;
-    margin: 0 auto 15px auto;
-}
-
-.background-image-left {
-    width: 40%;
-    position: absolute;
-    left: 0;
-    top: 10%;
-    bottom: 0;
-    z-index: -4;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 15px;
+  padding: 16px;
+  justify-content: center;
 }
 
 .skills .image-container {
-    width: 200px;
-    /* Fixed width for the container */
-    height: 200px;
-    /* Fixed height for the container */
-    overflow: hidden;
-    /* Hide any part of the image that exceeds the container */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    /* Optional: Add a shadow */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    /* Optional: Add a shadow */
+  width: 120px;
+  height: 120px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin: auto;
 }
 
 .skills .image-container img {
-    width: 100%;
-    /* Make the image fill the container width */
-    height: 100%;
-    /* Make the image fill the container height */
-    object-fit: cover;
-    /* Ensure the image covers the container without distortion */
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
+/* Hover Effect */
 .skills .image-container:hover {
-    transform: scale(1.05);
-    /* Slightly enlarge the image */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    /* Add a stronger shadow on hover */
+  transform: scale(1.08);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* === Button Styling === */
+.space-btn {
+  background: linear-gradient(45deg, #00f2ff, #0033ff);
+  color: #fff;
+  border: none;
+  padding: 10px 25px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 25px;
+  box-shadow: 0 4px 10px rgba(0, 255, 255, 0.4);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.space-btn:hover {
+  background: linear-gradient(45deg, #00c8ff, #0026ff);
+  box-shadow: 0 6px 15px rgba(0, 255, 255, 0.6);
+}
+
+.space-btn:active {
+  transform: scale(0.95);
+}
+
+/* === Background Image Responsive === */
+.background-image-left {
+  width: 30%;
+  position: absolute;
+  left: 0;
+  top: 10%;
+  bottom: 0;
+  z-index: -4;
+}
+
+/* === Responsive Design === */
+@media (max-width: 1024px) {
+  .skills-box {
+    padding: 40px;
+  }
+
+  .skills h2 {
+    font-size: 28px;
+  }
+
+  .skills .responsive-sub-text {
+    font-size: 20px;
+  }
+
+  .skills .image-container {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+@media (max-width: 768px) {
+  .skills-box {
+    padding: 30px;
+    border-radius: 40px;
+  }
+
+  .skills h2 {
+    font-size: 26px;
+  }
+
+  .skills .responsive-sub-text {
+    font-size: 18px;
+  }
+
+  .skills .image-grid {
+    grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+  }
+
+  .skills .image-container {
+    width: 90px;
+    height: 90px;
+  }
+
+  .background-image-left {
+    width: 40%;
+  }
+}
+
+@media (max-width: 480px) {
+  .skills-box {
+    padding: 25px;
+  }
+
+  .skills h2 {
+    font-size: 24px;
+  }
+
+  .skills .responsive-sub-text {
+    font-size: 16px;
+  }
+
+  .skills .image-grid {
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  }
+
+  .skills .image-container {
+    width: 80px;
+    height: 80px;
+  }
+
+  .background-image-left {
+    width: 50%;
+  }
 }

@@ -5,17 +5,19 @@
   text-align: left;
 }
 
-.banner .align-items-center .hero-image {
-  z-index: 1;
-  transform: translateY(-20px);
+.hero-content {
+  display: flex;
+  align-items: center;
+}
+
+.text-content {
+  text-align: left;
 }
 
 .banner .tagline {
   letter-spacing: .8px;
   font-weight: 700;
   padding: 6px 8px;
-  /* border: 1px solid rgba(255, 255, 255, 0.5); */
-  /* background: linear-gradient(90deg, rgba(170, 54, 124, 0.5), rgba(74, 47, 189, 0.5)); */
   font-size: 40px;
   display: inline-block;
   margin-bottom: 16px;
@@ -27,51 +29,19 @@
 
 .banner .tagline .hand-wave {
   font-size: 40px;
-  animation-name: wave-animation;
-  /* Refers to the name of your @keyframes element below */
-  animation-duration: 2.5s;
-  /* Change to speed up or slow down */
-  animation-iteration-count: infinite;
-  /* Never stop waving :) */
+  animation: wave-animation 2.5s infinite;
   transform-origin: 70% 70%;
-  /* Pivot around the bottom-left palm */
   display: inline-block;
 }
 
 @keyframes wave-animation {
-  0% {
-    transform: rotate(0.0deg)
-  }
-
-  10% {
-    transform: rotate(14.0deg)
-  }
-
-  /* The following five values can be played with to make the waving more or less extreme */
-  20% {
-    transform: rotate(-8.0deg)
-  }
-
-  30% {
-    transform: rotate(14.0deg)
-  }
-
-  40% {
-    transform: rotate(-4.0deg)
-  }
-
-  50% {
-    transform: rotate(10.0deg)
-  }
-
-  60% {
-    transform: rotate(0.0deg)
-  }
-
-  /* Reset for the last half to pause */
-  100% {
-    transform: rotate(0.0deg)
-  }
+  0%, 100% { transform: rotate(0.0deg); }
+  10% { transform: rotate(14.0deg); }
+  20% { transform: rotate(-8.0deg); }
+  30% { transform: rotate(14.0deg); }
+  40% { transform: rotate(-4.0deg); }
+  50% { transform: rotate(10.0deg); }
+  60% { transform: rotate(0.0deg); }
 }
 
 .banner h1 {
@@ -80,7 +50,6 @@
   font-size: 65px;
   line-height: 1;
   margin-bottom: 20px;
-  display: block;
 }
 
 .banner p {
@@ -111,51 +80,85 @@ a {
 .banner button svg {
   font-size: 25px;
   margin-left: 10px;
-  line-height: 1;
   transition: ease-in-out .3s;
-  -webkit-transition: ease-in-out .3s;
-  -moz-transition: ease-in-out .3s;
-  -ms-transition: ease-in-out .3s;
-  -o-transition: ease-in-out .3s;
+}
+
+.highlight-text {
+  color: aquamarine;
 }
 
 .banner button:hover svg {
   margin-left: 25px;
 }
 
-.banner img {
+.hero-image {
   width: 100%;
   animation: updown 3s linear infinite;
-  -webkit-animation: updown 3s linear infinite;
 }
 
 @keyframes updown {
-  0% {
-    transform: translateY(-20px);
-    -webkit-transform: translateY(-20px);
-    -moz-transform: translateY(-20px);
-    -ms-transform: translateY(-20px);
-    -o-transform: translateY(-20px);
-  }
-
-  50% {
-    transform: translateY(20px);
-    -webkit-transform: translateY(20px);
-    -moz-transform: translateY(20px);
-    -ms-transform: translateY(20px);
-    -o-transform: translateY(20px);
-  }
-
-  100% {
-    transform: translateY(-20px);
-    -webkit-transform: translateY(-20px);
-    -moz-transform: translateY(-20px);
-    -ms-transform: translateY(-20px);
-    -o-transform: translateY(-20px);
-  }
+  0% { transform: translateY(-20px); }
+  50% { transform: translateY(20px); }
+  100% { transform: translateY(-20px); }
 }
 
 .wrap {
   border-right: 1.2px solid rgb(158, 158, 158);
   color: aquamarine;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 991px) {
+  .banner {
+    padding: 120px 0 80px 0;
+    text-align: center;
+  }
+
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .banner h1 {
+    font-size: 45px;
+  }
+
+  .banner p {
+    font-size: 16px;
+    width: 100%;
+  }
+
+  .banner .tagline {
+    font-size: 30px;
+  }
+
+  .banner button {
+    margin-top: 30px;
+  }
+
+  .hero-image {
+    margin-top: 20px;
+    max-width: 80%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 576px) {
+  .banner h1 {
+    font-size: 35px;
+  }
+
+  .banner .tagline {
+    font-size: 24px;
+  }
+
+  .banner p {
+    font-size: 14px;
+  }
+
+  .hero-image {
+    max-width: 100%;
+  }
 }

@@ -9,11 +9,12 @@ import htmlImg from './assets/image/tech/html.png'
 import tlImg from './assets/image/tech/tailwind.png'
 import pyImg from './assets/image/tech/python.png'
 import dkImg from './assets/image/tech/docker.png'
-import awsImg from './assets/image/tech/aws.png'
+import awsImg from './assets/image/tech/aws-color.png'
 import mysqlImg from './assets/image/tech/mysql.png'
 import azImg from './assets/image/tech/azure.svg'
 import kubImg from './assets/image/tech/kub.png'
 import reImg from './assets/image/tech/redis.webp'
+import flutter from './assets/image/tech/flutter.webp'
 
 const technologies = [
   {
@@ -60,6 +61,9 @@ const technologies = [
   },
   {
     icon: reImg
+  },
+  {
+    icon: flutter
   }
 ]
 
