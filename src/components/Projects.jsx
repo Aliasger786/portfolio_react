@@ -1,7 +1,5 @@
 import React from "react";
-// Syles
 import "./Projects.css";
-// Project Image
 import img1 from "../assets/image/cryoport.png";
 import img2 from "../assets/image/ap.png";
 import img3 from "../assets/image/teleme.png";

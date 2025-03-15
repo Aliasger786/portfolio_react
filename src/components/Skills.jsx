@@ -1,13 +1,13 @@
-import React from "react";
+import React from 'react';
 // Styles
-import "./Skills.css";
+import './Skills.css';
 // Multi Carousel Component
-import "react-multi-carousel/lib/styles.css";
+import 'react-multi-carousel/lib/styles.css';
 // React Bootstrap
-import { Col, Container, Row } from "react-bootstrap";
+import { Col, Container, Row } from 'react-bootstrap';
 // Background Image
-import colorSharp from "../assets/image/color-sharp.png";
-import { technologies } from "../constants";
+import colorSharp from '../assets/image/color-sharp.png';
+import { technologies } from '../constants';
 
 function Skills() {
   // Carousel Responsive Settings
@@ -35,7 +35,7 @@ function Skills() {
     // React Fragment
     <>
       {/* Skils Section */}
-      <section id="skills" className="skills">
+      <section id='skills' className='skills'>
         {/* Bootstrap Grid System */}
         {/* Container */}
         <Container>
@@ -44,28 +44,16 @@ function Skills() {
             {/* Col */}
             <Col>
               {/* Skills Box */}
-              <div className="skills-box">
+              <div className='skills-box'>
                 {/* Skills Title */}
                 <h2>Skills</h2>
                 {/* Skills Description */}
-                <p>
-                  <ul className="skill-list">
-                    <li><strong>Frontend Development:&nbsp;</strong> Proficient in React.js for building dynamic and responsive user interfaces.</li>
+                <p className='responsive-sub-text'>Technical Skillset</p>
 
-                    <li><strong>Backend Development:&nbsp;</strong> Skilled in Ruby on Rails and Python for creating robust and scalable server-side applications.</li>
-
-                    <li><strong>Cloud Platforms:&nbsp;</strong> Hands-on experience with AWS and Azure for deploying and managing cloud-based solutions.</li>
-
-                    <li><strong>DevOps:&nbsp;</strong> Proficient in Kubernetes for container orchestration and CI/CD pipelines for automated deployments.</li>
-
-                    <li><strong>Problem Solving:&nbsp;</strong> Strong ability to troubleshoot and optimize applications for performance and scalability.</li>
-                  </ul>
-                </p>
-
-                <div class='image-grid'>
+                <div className='image-grid'>
                   {technologies.map((technology) => (
-                    <div className="image-container">
-                      <img src={technology.icon} alt="Image 1" />
+                    <div className='image-container'>
+                      <img src={technology.icon} alt='Image 1' />
                     </div>
                   ))}
                 </div>
@@ -76,7 +64,7 @@ function Skills() {
           </Row>
         </Container>
         {/* Background Image */}
-        <img src={colorSharp} className="background-image-left" />
+        <img src={colorSharp} className='background-image-left' />
       </section>
     </>
   );

@@ -170,6 +170,7 @@
 
 .project-image-box:hover::before {
   height: 100%;
+  cursor: pointer;
 }
 
 .text {
@@ -194,6 +195,7 @@
 .project-image-box:hover .text {
   top: 50%;
   opacity: 1;
+  cursor: pointer;
 }
 
 .text h4 {
