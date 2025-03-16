@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from "react";
-import { Col, Container, Row } from "react-bootstrap";
-import * as Icon from "react-bootstrap-icons";
-import headerImg from "../assets/image/fgt.png";
-import "./HeroSection.css";
+import React, { useState, useEffect } from 'react';
+import { Col, Container, Row } from 'react-bootstrap';
+import * as Icon from 'react-bootstrap-icons';
+import headerImg from '../assets/image/fgt.png';
+import './HeroSection.css';
 
 function HeroSection() {
   const [loopNum, setLoopNum] = useState(0);
@@ -32,7 +32,7 @@ function HeroSection() {
     if (!deleting && updatedText === fullText) {
       setDeleting(true);
       setDelta(period);
-    } else if (deleting && updatedText === "") {
+    } else if (deleting && updatedText === '') {
       setDeleting(false);
       setDelta(200); // Faster reset for next typing phase
       setLoopNum(loopNum + 1);
@@ -41,31 +41,30 @@ function HeroSection() {
 
   return (
     <>
-      <section className="banner" id="home">
-        <Container className="align-items-center">
+      <section className='banner' id='home'>
+        <Container className='align-items-center'>
           <Row>
             <Col xs={12} md={6} xl={7}>
-              <span className="tagline">
-                Hi There! <span className="hand-wave">👋</span>
+              <span className='tagline'>
+                Hi There! <span className='hand-wave'>👋</span>
               </span>
               <h1>
-                <span className="name-field">I'M <span className="name">Ali Asger</span></span>
+                <span className='name-field'>I'M <span className='name'>Ali Asger</span></span>
                 <br />
-                <span className="wrap">{Text}</span>
+                <span className='wrap'>{Text}</span>
               </h1>
               <p>
                 With 4+ years of experience as a Full Stack Developer, I specialize in building scalable and efficient web applications using a wide range of technologies,
                 including Ruby on Rails, React.js, AWS and Python. My passion lies in solving complex problems and delivering high-quality solutions that drive business growth.
               </p>
-              <a href="#contact">
-                <button
-                >
+              <a href='#contact'>
+                <button>
                   Let's Connect <Icon.ArrowRightCircle size={25} />
                 </button>
               </a>
             </Col>
             <Col>
-              <img src={headerImg} alt="herosection" className="hero-image" />
+              <img src={headerImg} alt='herosection' className='hero-image' />
             </Col>
           </Row>
         </Container>

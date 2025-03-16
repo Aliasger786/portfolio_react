@@ -1,11 +1,11 @@
-import React from "react";
-import "./Projects.css";
-import img1 from "../assets/image/cryoport.png";
-import img2 from "../assets/image/ap.png";
-import img3 from "../assets/image/teleme.png";
-import { Col, Container, Nav, Row, Tab } from "react-bootstrap";
-import ProjectsCard from "./ProjectsCard";
-import colorSharp from "../assets/image/color-sharp2.png";
+import React from 'react';
+import './Projects.css';
+import img1 from '../assets/image/cryoport.png';
+import img2 from '../assets/image/ap.png';
+import img3 from '../assets/image/teleme.png';
+import { Col, Container, Nav, Row, Tab } from 'react-bootstrap';
+import ProjectsCard from './ProjectsCard';
+import colorSharp from '../assets/image/color-sharp2.png';
 
 function Projects() {
   const projects = [
@@ -34,7 +34,6 @@ function Projects() {
 
   const getFilteredProjects = (projects, category) => {
     return projects.reduce((acc, project, index) => {
-      // If no category is provided or the project matches the category, include it
       if (!category || project.category === category) {
         acc.push(<ProjectsCard key={index} {...project} />);
       }
@@ -42,9 +41,8 @@ function Projects() {
     }, []);
   };
 
-  // Return JSX
   return (
-    <section className="projects" id="projects">
+    <section className='projects' id='projects'>
       <Container>
         <Row>
           <Col>
@@ -52,33 +50,33 @@ function Projects() {
             <p>
               I’ve worked on a variety of projects, from building scalable web applications with Ruby on Rails and React.js to deploying cloud-based solutions on AWS and Azure. My work includes developing efficient CI/CD pipelines, containerizing applications with Kubernetes, and creating seamless user experiences. Each project reflects my passion for solving complex problems and delivering high-quality results.
             </p>
-            <Tab.Container defaultActiveKey="first" id="projects-tabs">
-              <Nav variant="pills" defaultActiveKey="/home">
+            <Tab.Container defaultActiveKey='first' id='projects-tabs'>
+              <Nav variant='pills' defaultActiveKey='/home'>
                 <Nav.Item>
-                  <Nav.Link eventKey="first">All</Nav.Link>
+                  <Nav.Link eventKey='first'>All</Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
-                  <Nav.Link eventKey="second">Asset Managment</Nav.Link>
+                  <Nav.Link eventKey='second'>Asset Management</Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
-                  <Nav.Link eventKey="third">Health Care</Nav.Link>
+                  <Nav.Link eventKey='third'>Health Care</Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
-                  <Nav.Link eventKey="fourth">Ecommerce</Nav.Link>
+                  <Nav.Link eventKey='fourth'>Ecommerce</Nav.Link>
                 </Nav.Item>
               </Nav>
               <Tab.Content>
-                <Tab.Pane eventKey="first">
+                <Tab.Pane eventKey='first'>
                   <Row>
                     {getFilteredProjects(projects)}
                   </Row>
                 </Tab.Pane>
-                <Tab.Pane eventKey="second">
+                <Tab.Pane eventKey='second'>
                   <Row>
                     {getFilteredProjects(projects, 'asset')}
                   </Row>
                 </Tab.Pane>
-                <Tab.Pane eventKey="third">
+                <Tab.Pane eventKey='third'>
                   <Row>
                     {getFilteredProjects(projects, 'healthcare')}
                   </Row>
@@ -88,7 +86,7 @@ function Projects() {
           </Col>
         </Row>
       </Container>
-      <img src={colorSharp} className="background-image-right" alt="" />
+      <img src={colorSharp} className='background-image-right' alt='' />
     </section>
   );
 }

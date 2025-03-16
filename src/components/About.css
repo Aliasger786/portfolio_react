@@ -29,71 +29,56 @@ h2 {
 .about .heading-title {
   margin-top: 30px;
   padding: 8px 12px;
-  ;
+}
+
+.highlight, .db, .cloud, .devops, .method {
+  font-weight: bold;
 }
 
 .highlight {
   color: #0fd9ff;
-  /* Neon cyan */
-  font-weight: bold;
 }
 
 .db {
   color: #ff8c00;
-  /* Bright orange for database tech */
-  font-weight: bold;
 }
 
 .cloud {
   color: #ff1493;
-  /* Neon pink for cloud services */
-  font-weight: bold;
 }
 
 .devops {
   color: #32cd32;
-  /* Electric green for DevOps */
-  font-weight: bold;
 }
 
 .method {
   color: #9400d3;
-  /* Deep purple for methodologies */
-  font-weight: bold;
 }
 
-/* Add a glowing hover effect */
 p span:hover {
   text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
 }
 
-/* Space-themed button styling */
 .space-btn {
   background: linear-gradient(45deg, rgba(0, 255, 255, 0.7), rgba(0, 0, 255, 0.7));
-  /* Space-like gradient */
   color: #fff;
-  /* Text color */
   border: none;
   padding: 12px 30px;
   font-size: 18px;
   font-weight: bold;
   border-radius: 30px;
-  /* Rounded corners */
   box-shadow: 0 4px 10px rgba(255, 255, 255, 0.4), 0 0 15px rgba(0, 255, 255, 0.4);
-  /* Glow effect */
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
 .space-btn:hover {
   background: linear-gradient(45deg, rgba(0, 255, 255, 0.9), rgba(0, 0, 255, 0.9));
-  /* Bright hover effect */
   box-shadow: 0 8px 20px rgba(255, 255, 255, 0.6), 0 0 25px rgba(0, 255, 255, 0.6);
 }
 
 .space-btn:active {
   transform: scale(0.98);
-  /* Slight shrink on click */
 }
 
 .social-links {
@@ -102,11 +87,7 @@ p span:hover {
 
 .about-hero-image {
   width: 400px;
-  /* Adjust width as needed */
   height: 400px;
-  /* Adjust height as needed */
   border-radius: 50%;
-  /* Makes the image circular */
   object-fit: cover;
-  /* Ensures the image fits well */
 }

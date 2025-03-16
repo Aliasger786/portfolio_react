@@ -1,40 +1,33 @@
 .experience .responsive-heading {
   color: white;
-  /* text-white */
   font-weight: 900;
-  /* font-black */
-
-  /* Base font size */
   font-size: 30px;
-  /* text-[30px] */
 
-  /* Responsive font sizes */
   @media (max-width: 600px) {
-    /* xs:text-[40px] */
     font-size: 40px;
   }
 
   @media (min-width: 600px) {
-    /* sm:text-[50px] */
     font-size: 50px;
   }
 
   @media (min-width: 768px) {
-    /* md:text-[60px] */
     font-size: 60px;
   }
 }
 
-.experience .responsive-sub-text {
-  font-size: 24px;
+.experience .responsive-sub-text,
+.experience .card-title {
   color: white;
   font-weight: 700;
 }
 
+.experience .responsive-sub-text {
+  font-size: 24px;
+}
+
 .experience .card-title {
   font-size: 32px;
-  color: white;
-  font-weight: 700;
   margin: 0;
 }
 
@@ -46,8 +39,6 @@
 
 .experience .card-img {
   width: 100%;
-  /* w-[60%] */
   height: 100%;
-  /* h-[60%] */
   object-fit: contain;
 }
