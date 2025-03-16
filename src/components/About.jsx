@@ -20,7 +20,7 @@ const SocialLinks = () => (
   </div>
 );
 
-const About = (() => {
+const About = () => {
   const handleResumeRedirect = () => {
     window.open(resumeLink, '_blank');
   };
@@ -37,7 +37,7 @@ const About = (() => {
             <div className='about-text'>
               <p>
                 🚀<span className='highlight'> Full-Stack Developer</span> with 4+ years of experience in building dynamic and scalable
-                web applications using <span className='highlight'>Ruby on Rails</span>, <span className='highlight'>React.js</span> and <span className='highlight'></span>.
+                web applications using <span className='highlight'>Ruby on Rails</span>, <span className='highlight'>React.js</span>.
                 Proficient in API development, database management (<span className='db'>MySQL</span>, <span className='db'>PostgreSQL</span>),
                 and cloud services like <span className='cloud'>AWS</span>.<br/><br/>💡 Passionate about writing clean, test-driven code and
                 optimizing performance. Skilled in DevOps tools like <span className='devops'>Docker</span> and <span className='devops'>Kubernetes</span>,
@@ -61,6 +61,6 @@ const About = (() => {
       <img src={colorSharp1} className='background-image-left' alt='' />
     </section>
   );
-});
+};
 
 export default About;

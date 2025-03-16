@@ -14,6 +14,7 @@ import mysqlImg from './assets/image/tech/mysql.png'
 import azImg from './assets/image/tech/azure.svg'
 import kubImg from './assets/image/tech/kub.png'
 import reImg from './assets/image/tech/redis.webp'
+import flutter from './assets/image/tech/flutter.webp'
 
 const technologies = [
   {
@@ -60,6 +61,9 @@ const technologies = [
   },
   {
     icon: reImg
+  },
+  {
+    icon: flutter
   }
 ]
 

@@ -53,16 +53,19 @@ function Projects() {
             <Tab.Container defaultActiveKey='first' id='projects-tabs'>
               <Nav variant='pills' defaultActiveKey='/home'>
                 <Nav.Item>
-                  <Nav.Link eventKey='first'>All</Nav.Link>
+                  <Nav.Link eventKey='first' className='nav-link'>
+                    All
+                  </Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
-                  <Nav.Link eventKey='second'>Asset Management</Nav.Link>
+                  <Nav.Link eventKey='second' className='nav-link'>
+                    Health Care
+                  </Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
-                  <Nav.Link eventKey='third'>Health Care</Nav.Link>
-                </Nav.Item>
-                <Nav.Item>
-                  <Nav.Link eventKey='fourth'>Ecommerce</Nav.Link>
+                  <Nav.Link eventKey='third' className='nav-link'>
+                    Asset Track
+                  </Nav.Link>
                 </Nav.Item>
               </Nav>
               <Tab.Content>
@@ -73,12 +76,12 @@ function Projects() {
                 </Tab.Pane>
                 <Tab.Pane eventKey='second'>
                   <Row>
-                    {getFilteredProjects(projects, 'asset')}
+                    {getFilteredProjects(projects, 'healthcare')}
                   </Row>
                 </Tab.Pane>
                 <Tab.Pane eventKey='third'>
                   <Row>
-                    {getFilteredProjects(projects, 'healthcare')}
+                    {getFilteredProjects(projects, 'asset')}
                   </Row>
                 </Tab.Pane>
               </Tab.Content>
