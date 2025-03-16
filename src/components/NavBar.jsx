@@ -28,7 +28,7 @@ function NavBar() {
     <Navbar expand='lg' className={scrolled ? 'scrolled' : ''}>
       <Container className='nav-bar-links'>
         <Navbar.Brand href='#home'>Ali Asger</Navbar.Brand>
-        <Navbar.Toggle className='border-light text-light' aria-controls='basic-navbar-nav' />
+        <Navbar.Toggle className='border-light text-light custom-toggler' aria-controls='basic-navbar-nav' />
         <Navbar.Collapse id='basic-navbar-nav'>
           <Nav className='me-auto'></Nav>
           <span className='navbar-text'>
