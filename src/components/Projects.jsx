@@ -1,7 +1,7 @@
 import React from 'react';
 import './Projects.css';
 import img1 from '../assets/image/cryoport.png';
-import img2 from '../assets/image/ap.png';
+import img2 from '../assets/image/relishers-img.png';
 import img3 from '../assets/image/teleme.png';
 import { Col, Container, Nav, Row, Tab } from 'react-bootstrap';
 import ProjectsCard from './ProjectsCard';
@@ -17,11 +17,11 @@ function Projects() {
       link: 'https://www.cryoport.com/'
     },
     {
-      title: 'Asset Panda',
-      description: 'Asset Panda is a powerful asset management platform that helps organizations track, manage, and optimize their assets in real-time. With features like cloud-based tracking, customizable workflows, barcode scanning, and reporting, it streamlines asset management for businesses of all sizes.',
+      title: 'Relishers',
+      description: 'Relishers is a food delivery service that connects customers with local restaurants and food providers. It offers a wide variety of cuisines and meal options, making it easy for users to find and order their favorite dishes online. With a user-friendly app and reliable delivery, Relishers aims to enhance the food ordering experience.',
       img: img2,
-      category: 'asset',
-      link: 'https://www.assetpanda.com/'
+      category: 'ecommerce',
+      link: 'https://relishers-v3.netlify.app/' 
     },
     {
       title: 'Teleme',
@@ -64,7 +64,7 @@ function Projects() {
                 </Nav.Item>
                 <Nav.Item>
                   <Nav.Link eventKey='third' className='nav-link'>
-                    Asset Track
+                    E-commerce
                   </Nav.Link>
                 </Nav.Item>
               </Nav>
@@ -81,7 +81,7 @@ function Projects() {
                 </Tab.Pane>
                 <Tab.Pane eventKey='third'>
                   <Row>
-                    {getFilteredProjects(projects, 'asset')}
+                    {getFilteredProjects(projects, 'ecommerce')}
                   </Row>
                 </Tab.Pane>
               </Tab.Content>
